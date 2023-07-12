@@ -48,6 +48,10 @@ const configStore = create<ConfigState>()(
         {
           label: 'GPT-4',
           value: 'gpt-4'
+        },
+        {
+          label: 'text-davinci-003',
+          value: 'text-davinci-003'
         }
         // {
         //   label: 'GPT-4-0314',

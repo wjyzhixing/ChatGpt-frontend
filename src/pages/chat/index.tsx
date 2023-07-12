@@ -121,7 +121,7 @@ function ChatPage() {
       })
       fetchController?.abort()
       setFetchController(null)
-      message.error('请求失败')
+      // message.error('请求失败')
       return
     }
     const reader = response.body?.getReader?.()

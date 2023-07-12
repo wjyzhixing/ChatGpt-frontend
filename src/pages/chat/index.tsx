@@ -94,7 +94,7 @@ function ChatPage() {
     requestOptions: RequestChatOptions
     assistantMessageId: string
   }) {
-    const response = await postChatCompletions(requestOptions, {
+    const response: unknown = await postChatCompletions(requestOptions, {
       options: {
         signal
       }
@@ -117,7 +117,7 @@ function ChatPage() {
 
       setChatDataInfo(selectChatId, assistantMessageId, {
         status: 'error',
-        text: response?.message || '❌ 请求异常，请稍后在尝试。'
+        text: response?.data?.msg?.content || '❌ 请求异常，请稍后在尝试。'
       })
       fetchController?.abort()
       setFetchController(null)
